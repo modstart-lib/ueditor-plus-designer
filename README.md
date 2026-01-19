@@ -4,6 +4,8 @@
 
 🎨 **可视化排版编辑器** - 基于 UEditor Plus 的可视化内容设计工具
 
+![](https://ms-assets.modstart.com/data/image/2026/01/19/31777_1ajn_3371.png)
+
 [![npm version](https://badge.fury.io/js/ueditor-plus-designer.svg)](https://www.npmjs.com/package/ueditor-plus-designer)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-blue.svg)](https://www.typescriptlang.org/)
