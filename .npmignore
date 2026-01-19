@@ -1,0 +1,47 @@
+# Development files
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Source files (not needed in npm package)
+src/
+examples/
+doc/
+tests/
+*.test.ts
+*.spec.ts
+
+# Documentation (keep only essential ones)
+AGENTS.md
+DEVELOPMENT_SUMMARY.md
+PROJECT_COMPLETION_REPORT.md
+NODE_VERSION.md
+
+# Build tools
+vite.config.*.ts
+tsconfig.*.json
+.nvmrc
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+*.swp
+*.swo
+*~
+
+# Temp files
+tmp/
+temp/
+*.tmp

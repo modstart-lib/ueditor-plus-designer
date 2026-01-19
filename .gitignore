@@ -1,0 +1,18 @@
+node_modules
+dist
+*.log
+.DS_Store
+.idea
+.vscode
+*.local
+
+# Build outputs
+dist-ssr
+*.tsbuildinfo
+
+# Dependency directories
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+/AGENTS.md
+
