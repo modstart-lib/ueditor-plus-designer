@@ -1,11 +1,8 @@
 import { useRef, useState } from 'react'
 // @ts-ignore - veaury type compatibility
-import { UEditorPlusDesigner, type DesignerRef } from 'ueditor-plus-designer'
+import { UEditorPlusDesigner } from 'ueditor-plus-designer/react'
+import 'ueditor-plus-designer/style'
 import './App.css'
-// Import styles - adjust path based on your setup
-// import 'ueditor-plus-designer/style'  // Use this when installed from npm
-// import { UEditorPlusDesigner } from 'ueditor-plus-designer/react'  // Use this for React
-import '../../../dist/vue/vue-style.css'  // Use this for local development
 
 function App() {
   // Designer instance ref

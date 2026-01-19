@@ -26,9 +26,7 @@
 <script setup>
 import {ref} from 'vue'
 import {UEditorPlusDesigner} from 'ueditor-plus-designer'
-// Import styles - adjust path based on your setup
-// import 'ueditor-plus-designer/style'  // Use this when installed from npm
-import '../../../dist/vue/vue-style.css'  // Use this for local development
+import 'ueditor-plus-designer/style'
 
 // Designer instance ref
 const designerRef = ref(null)

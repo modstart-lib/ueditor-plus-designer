@@ -16,13 +16,6 @@ export default defineConfig({
     vue()
   ],
   base: isModStart ? BASE_PATH : './',
-  resolve: {
-    alias: {
-      // Link to the parent project's dist folder for testing
-      'ueditor-plus-designer': resolve(__dirname, '../../dist/react/react.es.js'),
-      'ueditor-plus-designer/style': resolve(__dirname, '../../dist/react/react-style.css')
-    }
-  },
   experimental: {
     renderBuiltUrl(filename, {hostType, type}) {
       // console.log('renderBuiltUrl', {isModStart, filename, hostType, type});

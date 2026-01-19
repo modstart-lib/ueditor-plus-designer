@@ -12,6 +12,22 @@
 [![Vue](https://img.shields.io/badge/Vue-3.4+-42b883.svg)](https://vuejs.org/)
 [![React](https://img.shields.io/badge/React-16.8+-61dafb.svg)](https://reactjs.org/)
 
+---
+
+### 📜 许可证说明
+
+**压缩版免费使用** | **源码访问需授权** | **商业使用需授权**
+
+- ✅ **压缩版（编译后版本）**：免费用于个人学习和非商业项目
+- ❌ **源码访问**：查看、修改或分发源代码需要授权
+- ❌ **商业使用**：生产环境部署、商业产品或盈利性项目需要授权
+
+📮 **授权联系**: [modstart@163.com](mailto:modstart@163.com)
+
+详细条款请查看 [LICENSE](LICENSE) 文件。
+
+---
+
 </div>
 
 ## ✨ 特性
@@ -26,6 +42,8 @@
 - 📦 **灵活集成** - 支持 ES Module、UMD、Standalone 等多种构建方式
 
 ## 📦 安装
+
+> **注意**：以下安装方式获取的是**压缩版（编译后版本）**，可免费用于个人学习和非商业项目。如需商业使用或源码访问，请联系 [modstart@163.com](mailto:modstart@163.com) 获取授权。
 
 ### NPM / Yarn
 
@@ -58,7 +76,7 @@ pnpm add ueditor-plus-designer
 ```vue
 <template>
   <div class="designer-container">
-    <UEditor PlusPlusDesigner
+    <UEditorPlusDesigner
       ref="designerRef"
       :config="config"
       @ready="onReady"
@@ -69,7 +87,7 @@ pnpm add ueditor-plus-designer
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { UEditor PlusPlusDesigner } from 'ueditor-plus-designer'
+import { UEditorPlusDesigner } from 'ueditor-plus-designer'
 import type { DesignerConfig } from 'ueditor-plus-designer'
 import 'ueditor-plus-designer/style'
 
@@ -115,7 +133,7 @@ const setContent = (html: string) => {
 
 ```tsx
 import React, { useRef } from 'react'
-import { UEditor PlusPlusDesigner } from 'ueditor-plus-designer/react'
+import { UEditorPlusDesigner } from 'ueditor-plus-designer/react'
 import type { DesignerConfig, DesignerInstance } from 'ueditor-plus-designer'
 import 'ueditor-plus-designer/style'
 
@@ -148,7 +166,7 @@ function App() {
 
   return (
     <div style={{ width: '100%', height: '100vh' }}>
-      <UEditor PlusPlusDesigner
+      <UEditorPlusDesigner
         ref={designerRef}
         config={config}
         onReady={handleReady}
@@ -170,14 +188,14 @@ export default App
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UEditor Plus Designer</title>
-  <link rel="stylesheet" href="dist/standalone/standalone.css">
+  <link rel="stylesheet" href="dist/standalone/ueditor-plus-designer.standalone.css">
 </head>
 <body>
   <div id="designer-container"></div>
 
-  <script src="dist/standalone/standalone.umd.js"></script>
+  <script src="dist/standalone/ueditor-plus-designer.standalone.js"></script>
   <script>
-    const designer = new UEditor PlusPlusDesigner({
+    const designer = new UEditorPlusDesigner({
       container: '#designer-container',
       ueditorPath: '/ueditor-plus',
       onReady: () => {
@@ -198,25 +216,6 @@ export default App
 </html>
 ```
 
-## 📚 核心概念
-
-### Section（区块）
-
-UEditor Plus Designer 的核心是基于 **Section** 的内容组织方式。每个 Section 是一个独立的内容区块，可以包含文本、图片、视频等各种元素。
-
-- **独立编辑**: 每个 Section 可以单独编辑、移动和删除
-- **样式控制**: 支持对 Section 进行宽度、透明度、旋转等样式调整
-- **灵活布局**: 支持从素材面板拖拽插入新的 Section
-
-### 素材面板
-
-素材面板提供了预设的内容模板，用户可以：
-
-- 浏览分类的素材模板
-- 搜索所需的素材
-- 一键插入素材到编辑器
-- 自定义素材加载逻辑
-
 ## 🔧 配置选项
 
 ### DesignerConfig
@@ -230,7 +229,7 @@ interface DesignerConfig {
   ueditorPath?: string
 
   /** UEditor Plus 配置（透传给 UEditor Plus 实例） */
-  ueditorConfig?: UEditor PlusConfig
+  ueditorConfig?: UEditorPlusConfig
 
   /** 分类加载器 - 自定义素材分类数据源 */
   categoryLoader?: () => Promise<MaterialCategory[]>
@@ -246,91 +245,9 @@ interface DesignerConfig {
 }
 ```
 
-### UEditor PlusConfig
+### UEditorPlusConfig
 
-```typescript
-interface UEditor PlusConfig {
-  /** 服务器 URL */
-  serverUrl?: string
-  
-  /** 工具栏配置 */
-  toolbars?: string[][]
-  
-  /** 自动高度 */
-  autoHeightEnabled?: boolean
-  
-  /** 初始高度 */
-  initialFrameHeight?: number
-  
-  /** 图片弹窗 */
-  imagePopup?: boolean
-  
-  /** 自定义 iframe 样式 */
-  iframeCssStylesAddition?: string[]
-  
-  [key: string]: any
-}
-```
-
-## 🎯 API 参考
-
-### Props
-
-| 属性 | 类型 | 默认值 | 描述 |
-|------|------|--------|------|
-| `config` | `DesignerConfig` | `{}` | 设计器配置对象 |
-
-### Events
-
-| 事件名 | 参数 | 描述 |
-|--------|------|------|
-| `ready` | - | 设计器初始化完成时触发 |
-| `change` | `content: string` | 编辑器内容发生变化时触发 |
-| `section-active` | `sectionData: SectionData` | 选中某个 Section 时触发 |
-
-### 实例方法
-
-```typescript
-interface DesignerInstance {
-  /** 获取编辑器内容 HTML */
-  getContent(): string
-
-  /** 设置编辑器内容 */
-  setContent(content: string): void
-
-  /** 插入一个新的 Section */
-  insertSection(html: string, options?: any): void
-
-  /** 销毁编辑器实例 */
-  destroy(): void
-
-  /** 监听事件 */
-  on(event: string, callback: Function): void
-
-  /** 移除事件监听 */
-  off(event: string, callback?: Function): void
-
-  /** 重新布局（在容器尺寸变化时调用） */
-  doLayout(): void
-
-  /** 获取原始 UEditor Plus 实例 */
-  getEditor(): any
-}
-```
-
-### 使用示例
-
-```typescript
-// Vue 3
-const content = designerRef.value.getContent()
-designerRef.value.setContent('<div class="pb-section">新内容</div>')
-designerRef.value.insertSection('<p>新段落</p>')
-
-// React
-const content = designerRef.current?.getContent()
-designerRef.current?.setContent('<div class="pb-section">新内容</div>')
-designerRef.current?.insertSection('<p>新段落</p>')
-```
+参考 UEditor Plus 编辑器的配置文件。
 
 ## 🎨 自定义加载器
 
@@ -413,58 +330,9 @@ interface MaterialQueryParams {
   pageSize?: number
 }
 ```
-
-## 📖 进阶用法
-
-### 监听 Section 选中事件
-
-```typescript
-// Vue 3
-import { onMounted, onUnmounted } from 'vue'
-
-const handleSectionActive = (sectionData: SectionData) => {
-  console.log('Selected section:', sectionData)
-}
-
-onMounted(() => {
-  designerRef.value?.on('section-active', handleSectionActive)
-})
-
-onUnmounted(() => {
-  designerRef.value?.off('section-active', handleSectionActive)
-})
-```
-
-### 自定义工具栏
-
-```typescript
-const config: DesignerConfig = {
-  ueditorConfig: {
-    toolbars: [[
-      'source', 'undo', 'redo', '|',
-      'bold', 'italic', 'underline', 'fontborder', 'strikethrough', '|',
-      'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', '|',
-      'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|',
-      'link', 'unlink', 'inserttable', 'insertcode', 'horizontal'
-    ]]
-  }
-}
-```
-
-### 自定义 iframe 样式
-
-```typescript
-const config: DesignerConfig = {
-  ueditorConfig: {
-    iframeCssStylesAddition: [
-      'body { background-color: #f5f5f5; }',
-      '.pb-section { margin-bottom: 20px; }'
-    ]
-  }
-}
-```
-
 ## 🛠️ 开发
+
+> **注意**：本项目源码访问需要授权。以下开发说明仅供已获得授权的开发者参考。如需获取源码访问权限，请联系 [modstart@163.com](mailto:modstart@163.com)。
 
 ### 环境要求
 
@@ -584,79 +452,42 @@ ueditor-plus-designer/
 - **[React 示例](./examples/react/)** - 展示如何在 React 项目中集成
 - **[纯 HTML 示例](./examples/html/)** - 展示如何在纯 HTML 中使用
 
-## 🤝 贡献
-
-欢迎贡献代码、报告问题或提出建议！
-
-### 贡献指南
-
-1. Fork 本仓库
-2. 创建你的特性分支 (`git checkout -b feature/amazing-feature`)
-3. 提交你的更改 (`git commit -m 'Add some amazing feature'`)
-4. 推送到分支 (`git push origin feature/amazing-feature`)
-5. 开启一个 Pull Request
-
-### 开发规范
-
-- 遵循 TypeScript 严格模式
-- 使用 Vue 3 Composition API
-- 遵循项目现有的代码风格
-- 添加必要的 JSDoc 注释
-- 确保 `npm run type-check` 通过
-
-详细的开发指南请参考 [AGENTS.md](./AGENTS.md)
-
 ## 📄 许可证
 
-本项目基于 [Apache License 2.0](LICENSE) 开源。
+本项目基于 [Apache License 2.0](LICENSE) 开源，但商业使用和源码访问受以下限制：
 
-## 🔗 相关链接
+### 🆓 免费使用
 
-- **[完整文档](./doc/)** - 查看详细的使用文档
-- **[API 文档](./doc/api/)** - API 接口参考
-- **[使用指南](./doc/guide/)** - 快速上手指南
-- **[开发文档](./doc/dev/)** - 参与开发的文档
-- **[UEditor Plus](http://ueditor.baidu.com/)** - 底层富文本编辑器
+**压缩版（编译后版本）** 可免费用于以下场景：
 
-## ❓ 常见问题
+- ✅ 个人学习和非商业项目
+- ✅ 开发环境测试使用
+- ✅ 评估和试用
 
-### 如何部署 UEditor Plus 资源？
+### 💼 需要授权的情况
 
-UEditor Plus 资源需要单独部署到静态服务器，然后通过 `ueditorPath` 配置项指定路径。
+以下使用场景需要获得商业授权：
 
-```typescript
-const config = {
-  ueditorPath: '/static/ueditor-plus'  // 指向 UEditor Plus 资源的 URL 路径
-}
-```
+#### 1. 商业使用
+- ❌ 在生产环境中部署使用
+- ❌ 用于商业产品或服务
+- ❌ 用于盈利性项目
 
-### 如何自定义编辑器样式？
+#### 2. 源码访问
+- ❌ 查看、修改或分发源代码
+- ❌ 基于源码的二次开发
+- ❌ 创建衍生作品
 
-可以通过 `iframeCssStylesAddition` 配置项注入自定义样式：
+### 📮 获取授权
 
-```typescript
-const config = {
-  ueditorConfig: {
-    iframeCssStylesAddition: [
-      'body { font-family: Arial, sans-serif; }',
-      '.pb-section { padding: 20px; }'
-    ]
-  }
-}
-```
+如需商业授权或源码访问权限，请联系：
 
-### React 版本的实现原理？
+- **Email**: [modstart@163.com](mailto:modstart@163.com)
+- **GitHub**: [https://github.com/modstart-lib/ueditor-plus-designer](https://github.com/modstart-lib/ueditor-plus-designer)
 
-React 版本基于 [veaury](https://github.com/gloriasoft/veaury) 实现 Vue-React 互操作，将 Vue 3 组件包装为 React 组件。
+### ⚠️ 免责声明
 
-### 支持哪些浏览器？
-
-- Chrome >= 90
-- Firefox >= 88
-- Safari >= 14
-- Edge >= 90
-
-不支持 IE 浏览器。
+未经授权的商业使用或源码访问将被视为侵权行为。
 
 ## 💬 支持
 
@@ -666,10 +497,3 @@ React 版本基于 [veaury](https://github.com/gloriasoft/veaury) 实现 Vue-Rea
 - 查看 [文档](./doc/)
 - 参考 [示例项目](./examples/)
 
----
-
-<div align="center">
-
-Made with ❤️ by UEditor Plus Designer Team
-
-</div>

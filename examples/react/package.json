@@ -11,8 +11,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vue": "^3.4.0",
-    "veaury": "^2.2.0"
+    "ueditor-plus-designer": "^0.1.0",
+    "veaury": "^2.2.0",
+    "vue": "^3.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ueditor-plus-designer": "^0.1.0",
     "vue": "^3.4.0"
   },
   "devDependencies": {

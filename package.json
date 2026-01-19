@@ -1,6 +1,6 @@
 {
   "name": "ueditor-plus-designer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "可视化排版编辑器 - 基于UEditor的可视化内容设计工具",
   "main": "dist/vue/vue.umd.js",
   "module": "dist/vue/vue.es.js",
