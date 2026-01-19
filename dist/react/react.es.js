@@ -1,10 +1,10 @@
 var zt = Object.defineProperty;
-var Ut = (r, o, t) => o in r ? zt(r, o, { enumerable: !0, configurable: !0, writable: !0, value: t }) : r[o] = t;
-var B = (r, o, t) => Ut(r, typeof o != "symbol" ? o + "" : o, t);
-import dt, { forwardRef as Mt, useRef as Ft, useImperativeHandle as Ht } from "react";
+var Mt = (r, o, t) => o in r ? zt(r, o, { enumerable: !0, configurable: !0, writable: !0, value: t }) : r[o] = t;
+var B = (r, o, t) => Mt(r, typeof o != "symbol" ? o + "" : o, t);
+import pt, { forwardRef as Ft, useRef as Ut, useImperativeHandle as Ht } from "react";
 import { applyVueInReact as Vt } from "veaury";
-import { ref as R, onMounted as Je, watch as ve, defineComponent as _e, onUnmounted as ft, createElementBlock as O, openBlock as D, createElementVNode as c, normalizeClass as Ve, Fragment as Be, renderList as Ne, createCommentVNode as ue, toDisplayString as ye, withModifiers as Bt, withDirectives as W, withKeys as Nt, vModelText as Y, normalizeStyle as Wt, createVNode as Ye, createBlock as Yt, unref as N, createTextVNode as qt } from "vue";
-var qe = { exports: {} }, he = {};
+import { ref as E, onMounted as Xe, watch as ge, defineComponent as Ce, onUnmounted as vt, createElementBlock as O, openBlock as x, createElementVNode as c, normalizeClass as Ne, Fragment as We, renderList as Ye, createCommentVNode as fe, toDisplayString as we, withModifiers as Bt, withDirectives as W, withKeys as Nt, vModelText as Y, normalizeStyle as Wt, createVNode as Ke, createBlock as Yt, unref as N, createTextVNode as qt } from "vue";
+var Je = { exports: {} }, ye = {};
 /**
  * @license React
  * react-jsx-runtime.production.min.js
@@ -14,21 +14,21 @@ var qe = { exports: {} }, he = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var lt;
+var ut;
 function Kt() {
-  if (lt) return he;
-  lt = 1;
-  var r = dt, o = Symbol.for("react.element"), t = Symbol.for("react.fragment"), n = Object.prototype.hasOwnProperty, s = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, d = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function b(u, a, v) {
-    var f, h = {}, L = null, H = null;
+  if (ut) return ye;
+  ut = 1;
+  var r = pt, o = Symbol.for("react.element"), t = Symbol.for("react.fragment"), n = Object.prototype.hasOwnProperty, s = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, d = { key: !0, ref: !0, __self: !0, __source: !0 };
+  function C(u, a, v) {
+    var f, y = {}, L = null, H = null;
     v !== void 0 && (L = "" + v), a.key !== void 0 && (L = "" + a.key), a.ref !== void 0 && (H = a.ref);
-    for (f in a) n.call(a, f) && !d.hasOwnProperty(f) && (h[f] = a[f]);
-    if (u && u.defaultProps) for (f in a = u.defaultProps, a) h[f] === void 0 && (h[f] = a[f]);
-    return { $$typeof: o, type: u, key: L, ref: H, props: h, _owner: s.current };
+    for (f in a) n.call(a, f) && !d.hasOwnProperty(f) && (y[f] = a[f]);
+    if (u && u.defaultProps) for (f in a = u.defaultProps, a) y[f] === void 0 && (y[f] = a[f]);
+    return { $$typeof: o, type: u, key: L, ref: H, props: y, _owner: s.current };
   }
-  return he.Fragment = t, he.jsx = b, he.jsxs = b, he;
+  return ye.Fragment = t, ye.jsx = C, ye.jsxs = C, ye;
 }
-var me = {};
+var _e = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -38,57 +38,57 @@ var me = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var ct;
+var dt;
 function Jt() {
-  return ct || (ct = 1, process.env.NODE_ENV !== "production" && function() {
-    var r = dt, o = Symbol.for("react.element"), t = Symbol.for("react.portal"), n = Symbol.for("react.fragment"), s = Symbol.for("react.strict_mode"), d = Symbol.for("react.profiler"), b = Symbol.for("react.provider"), u = Symbol.for("react.context"), a = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), f = Symbol.for("react.suspense_list"), h = Symbol.for("react.memo"), L = Symbol.for("react.lazy"), H = Symbol.for("react.offscreen"), G = Symbol.iterator, X = "@@iterator";
-    function de(e) {
+  return dt || (dt = 1, process.env.NODE_ENV !== "production" && function() {
+    var r = pt, o = Symbol.for("react.element"), t = Symbol.for("react.portal"), n = Symbol.for("react.fragment"), s = Symbol.for("react.strict_mode"), d = Symbol.for("react.profiler"), C = Symbol.for("react.provider"), u = Symbol.for("react.context"), a = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), f = Symbol.for("react.suspense_list"), y = Symbol.for("react.memo"), L = Symbol.for("react.lazy"), H = Symbol.for("react.offscreen"), J = Symbol.iterator, G = "@@iterator";
+    function pe(e) {
       if (e === null || typeof e != "object")
         return null;
-      var i = G && e[G] || e[X];
+      var i = J && e[J] || e[G];
       return typeof i == "function" ? i : null;
     }
     var q = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-    function T(e) {
+    function D(e) {
       {
         for (var i = arguments.length, l = new Array(i > 1 ? i - 1 : 0), p = 1; p < i; p++)
           l[p - 1] = arguments[p];
-        U("error", e, l);
+        M("error", e, l);
       }
     }
-    function U(e, i, l) {
+    function M(e, i, l) {
       {
         var p = q.ReactDebugCurrentFrame, _ = p.getStackAddendum();
         _ !== "" && (i += "%s", l = l.concat([_]));
-        var C = l.map(function(y) {
-          return String(y);
+        var w = l.map(function(g) {
+          return String(g);
         });
-        C.unshift("Warning: " + i), Function.prototype.apply.call(console[e], console, C);
+        w.unshift("Warning: " + i), Function.prototype.apply.call(console[e], console, w);
       }
     }
-    var E = !1, ie = !1, M = !1, fe = !1, Le = !1, be;
-    be = Symbol.for("react.module.reference");
-    function je(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === n || e === d || Le || e === s || e === v || e === f || fe || e === H || E || ie || M || typeof e == "object" && e !== null && (e.$$typeof === L || e.$$typeof === h || e.$$typeof === b || e.$$typeof === u || e.$$typeof === a || // This needs to include all possible module reference object
+    var S = !1, se = !1, F = !1, ve = !1, je = !1, Se;
+    Se = Symbol.for("react.module.reference");
+    function Ae(e) {
+      return !!(typeof e == "string" || typeof e == "function" || e === n || e === d || je || e === s || e === v || e === f || ve || e === H || S || se || F || typeof e == "object" && e !== null && (e.$$typeof === L || e.$$typeof === y || e.$$typeof === C || e.$$typeof === u || e.$$typeof === a || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
-      e.$$typeof === be || e.getModuleId !== void 0));
+      e.$$typeof === Se || e.getModuleId !== void 0));
     }
-    function we(e, i, l) {
+    function Ee(e, i, l) {
       var p = e.displayName;
       if (p)
         return p;
       var _ = i.displayName || i.name || "";
       return _ !== "" ? l + "(" + _ + ")" : l;
     }
-    function Ce(e) {
+    function Re(e) {
       return e.displayName || "Context";
     }
     function K(e) {
       if (e == null)
         return null;
-      if (typeof e.tag == "number" && T("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."), typeof e == "function")
+      if (typeof e.tag == "number" && D("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."), typeof e == "function")
         return e.displayName || e.name || null;
       if (typeof e == "string")
         return e;
@@ -110,19 +110,19 @@ function Jt() {
         switch (e.$$typeof) {
           case u:
             var i = e;
-            return Ce(i) + ".Consumer";
-          case b:
+            return Re(i) + ".Consumer";
+          case C:
             var l = e;
-            return Ce(l._context) + ".Provider";
+            return Re(l._context) + ".Provider";
           case a:
-            return we(e, e.render, "ForwardRef");
-          case h:
+            return Ee(e, e.render, "ForwardRef");
+          case y:
             var p = e.displayName || null;
             return p !== null ? p : K(e.type) || "Memo";
           case L: {
-            var _ = e, C = _._payload, y = _._init;
+            var _ = e, w = _._payload, g = _._init;
             try {
-              return K(y(C));
+              return K(g(w));
             } catch {
               return null;
             }
@@ -130,18 +130,18 @@ function Jt() {
         }
       return null;
     }
-    var Z = Object.assign, ee = 0, Se, Ee, Re, pe, $e, se, V;
-    function ke() {
+    var X = Object.assign, te = 0, $e, ke, xe, he, De, ae, V;
+    function Te() {
     }
-    ke.__reactDisabledLog = !0;
-    function Ae() {
+    Te.__reactDisabledLog = !0;
+    function Ie() {
       {
-        if (ee === 0) {
-          Se = console.log, Ee = console.info, Re = console.warn, pe = console.error, $e = console.group, se = console.groupCollapsed, V = console.groupEnd;
+        if (te === 0) {
+          $e = console.log, ke = console.info, xe = console.warn, he = console.error, De = console.group, ae = console.groupCollapsed, V = console.groupEnd;
           var e = {
             configurable: !0,
             enumerable: !0,
-            value: ke,
+            value: Te,
             writable: !0
           };
           Object.defineProperties(console, {
@@ -154,65 +154,65 @@ function Jt() {
             groupEnd: e
           });
         }
-        ee++;
+        te++;
       }
     }
-    function Ie() {
+    function ze() {
       {
-        if (ee--, ee === 0) {
+        if (te--, te === 0) {
           var e = {
             configurable: !0,
             enumerable: !0,
             writable: !0
           };
           Object.defineProperties(console, {
-            log: Z({}, e, {
-              value: Se
-            }),
-            info: Z({}, e, {
-              value: Ee
-            }),
-            warn: Z({}, e, {
-              value: Re
-            }),
-            error: Z({}, e, {
-              value: pe
-            }),
-            group: Z({}, e, {
+            log: X({}, e, {
               value: $e
             }),
-            groupCollapsed: Z({}, e, {
-              value: se
+            info: X({}, e, {
+              value: ke
             }),
-            groupEnd: Z({}, e, {
+            warn: X({}, e, {
+              value: xe
+            }),
+            error: X({}, e, {
+              value: he
+            }),
+            group: X({}, e, {
+              value: De
+            }),
+            groupCollapsed: X({}, e, {
+              value: ae
+            }),
+            groupEnd: X({}, e, {
               value: V
             })
           });
         }
-        ee < 0 && T("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
+        te < 0 && D("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
       }
     }
-    var xe = q.ReactCurrentDispatcher, De;
-    function m(e, i, l) {
+    var Pe = q.ReactCurrentDispatcher, Oe;
+    function h(e, i, l) {
       {
-        if (De === void 0)
+        if (Oe === void 0)
           try {
             throw Error();
           } catch (_) {
             var p = _.stack.trim().match(/\n( *(at )?)/);
-            De = p && p[1] || "";
+            Oe = p && p[1] || "";
           }
         return `
-` + De + e;
+` + Oe + e;
       }
     }
-    var w = !1, z;
+    var b = !1, z;
     {
-      var te = typeof WeakMap == "function" ? WeakMap : Map;
-      z = new te();
+      var Q = typeof WeakMap == "function" ? WeakMap : Map;
+      z = new Q();
     }
     function oe(e, i) {
-      if (!e || w)
+      if (!e || b)
         return "";
       {
         var l = z.get(e);
@@ -220,34 +220,34 @@ function Jt() {
           return l;
       }
       var p;
-      w = !0;
+      b = !0;
       var _ = Error.prepareStackTrace;
       Error.prepareStackTrace = void 0;
-      var C;
-      C = xe.current, xe.current = null, Ae();
+      var w;
+      w = Pe.current, Pe.current = null, Ie();
       try {
         if (i) {
-          var y = function() {
+          var g = function() {
             throw Error();
           };
-          if (Object.defineProperty(y.prototype, "props", {
+          if (Object.defineProperty(g.prototype, "props", {
             set: function() {
               throw Error();
             }
           }), typeof Reflect == "object" && Reflect.construct) {
             try {
-              Reflect.construct(y, []);
+              Reflect.construct(g, []);
             } catch (I) {
               p = I;
             }
-            Reflect.construct(e, [], y);
+            Reflect.construct(e, [], g);
           } else {
             try {
-              y.call();
+              g.call();
             } catch (I) {
               p = I;
             }
-            e.call(y.prototype);
+            e.call(g.prototype);
           }
         } else {
           try {
@@ -259,95 +259,95 @@ function Jt() {
         }
       } catch (I) {
         if (I && p && typeof I.stack == "string") {
-          for (var g = I.stack.split(`
-`), A = p.stack.split(`
-`), $ = g.length - 1, x = A.length - 1; $ >= 1 && x >= 0 && g[$] !== A[x]; )
-            x--;
-          for (; $ >= 1 && x >= 0; $--, x--)
-            if (g[$] !== A[x]) {
-              if ($ !== 1 || x !== 1)
+          for (var m = I.stack.split(`
+`), j = p.stack.split(`
+`), R = m.length - 1, k = j.length - 1; R >= 1 && k >= 0 && m[R] !== j[k]; )
+            k--;
+          for (; R >= 1 && k >= 0; R--, k--)
+            if (m[R] !== j[k]) {
+              if (R !== 1 || k !== 1)
                 do
-                  if ($--, x--, x < 0 || g[$] !== A[x]) {
-                    var F = `
-` + g[$].replace(" at new ", " at ");
-                    return e.displayName && F.includes("<anonymous>") && (F = F.replace("<anonymous>", e.displayName)), typeof e == "function" && z.set(e, F), F;
+                  if (R--, k--, k < 0 || m[R] !== j[k]) {
+                    var U = `
+` + m[R].replace(" at new ", " at ");
+                    return e.displayName && U.includes("<anonymous>") && (U = U.replace("<anonymous>", e.displayName)), typeof e == "function" && z.set(e, U), U;
                   }
-                while ($ >= 1 && x >= 0);
+                while (R >= 1 && k >= 0);
               break;
             }
         }
       } finally {
-        w = !1, xe.current = C, Ie(), Error.prepareStackTrace = _;
+        b = !1, Pe.current = w, ze(), Error.prepareStackTrace = _;
       }
-      var le = e ? e.displayName || e.name : "", ne = le ? m(le) : "";
-      return typeof e == "function" && z.set(e, ne), ne;
+      var ue = e ? e.displayName || e.name : "", re = ue ? h(ue) : "";
+      return typeof e == "function" && z.set(e, re), re;
     }
-    function S(e, i, l) {
+    function T(e, i, l) {
       return oe(e, !1);
     }
-    function j(e) {
+    function A(e) {
       var i = e.prototype;
       return !!(i && i.isReactComponent);
     }
-    function k(e, i, l) {
+    function $(e, i, l) {
       if (e == null)
         return "";
       if (typeof e == "function")
-        return oe(e, j(e));
+        return oe(e, A(e));
       if (typeof e == "string")
-        return m(e);
+        return h(e);
       switch (e) {
         case v:
-          return m("Suspense");
+          return h("Suspense");
         case f:
-          return m("SuspenseList");
+          return h("SuspenseList");
       }
       if (typeof e == "object")
         switch (e.$$typeof) {
           case a:
-            return S(e.render);
-          case h:
-            return k(e.type, i, l);
+            return T(e.render);
+          case y:
+            return $(e.type, i, l);
           case L: {
-            var p = e, _ = p._payload, C = p._init;
+            var p = e, _ = p._payload, w = p._init;
             try {
-              return k(C(_), i, l);
+              return $(w(_), i, l);
             } catch {
             }
           }
         }
       return "";
     }
-    var Q = Object.prototype.hasOwnProperty, J = {}, Te = q.ReactDebugCurrentFrame;
-    function Pe(e) {
+    var ne = Object.prototype.hasOwnProperty, le = {}, me = q.ReactDebugCurrentFrame;
+    function ee(e) {
       if (e) {
-        var i = e._owner, l = k(e.type, e._source, i ? i.type : null);
-        Te.setExtraStackFrame(l);
+        var i = e._owner, l = $(e.type, e._source, i ? i.type : null);
+        me.setExtraStackFrame(l);
       } else
-        Te.setExtraStackFrame(null);
+        me.setExtraStackFrame(null);
     }
-    function ht(e, i, l, p, _) {
+    function Z(e, i, l, p, _) {
       {
-        var C = Function.call.bind(Q);
-        for (var y in e)
-          if (C(e, y)) {
-            var g = void 0;
+        var w = Function.call.bind(ne);
+        for (var g in e)
+          if (w(e, g)) {
+            var m = void 0;
             try {
-              if (typeof e[y] != "function") {
-                var A = Error((p || "React class") + ": " + l + " type `" + y + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[y] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
-                throw A.name = "Invariant Violation", A;
+              if (typeof e[g] != "function") {
+                var j = Error((p || "React class") + ": " + l + " type `" + g + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[g] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                throw j.name = "Invariant Violation", j;
               }
-              g = e[y](i, y, p, l, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
-            } catch ($) {
-              g = $;
+              m = e[g](i, g, p, l, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
+            } catch (R) {
+              m = R;
             }
-            g && !(g instanceof Error) && (Pe(_), T("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", p || "React class", l, y, typeof g), Pe(null)), g instanceof Error && !(g.message in J) && (J[g.message] = !0, Pe(_), T("Failed %s type: %s", l, g.message), Pe(null));
+            m && !(m instanceof Error) && (ee(_), D("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", p || "React class", l, g, typeof m), ee(null)), m instanceof Error && !(m.message in le) && (le[m.message] = !0, ee(_), D("Failed %s type: %s", l, m.message), ee(null));
           }
       }
     }
-    var mt = Array.isArray;
-    function ze(e) {
-      return mt(e);
+    var Me = Array.isArray;
+    function Fe(e) {
+      return Me(e);
     }
     function gt(e) {
       {
@@ -357,26 +357,26 @@ function Jt() {
     }
     function yt(e) {
       try {
-        return Ge(e), !1;
+        return Ze(e), !1;
       } catch {
         return !0;
       }
     }
-    function Ge(e) {
+    function Ze(e) {
       return "" + e;
     }
-    function Xe(e) {
+    function Qe(e) {
       if (yt(e))
-        return T("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", gt(e)), Ge(e);
+        return D("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", gt(e)), Ze(e);
     }
-    var Ze = q.ReactCurrentOwner, _t = {
+    var et = q.ReactCurrentOwner, _t = {
       key: !0,
       ref: !0,
       __self: !0,
       __source: !0
-    }, Qe, et;
+    }, tt, ot;
     function bt(e) {
-      if (Q.call(e, "ref")) {
+      if (ne.call(e, "ref")) {
         var i = Object.getOwnPropertyDescriptor(e, "ref").get;
         if (i && i.isReactWarning)
           return !1;
@@ -384,7 +384,7 @@ function Jt() {
       return e.ref !== void 0;
     }
     function wt(e) {
-      if (Q.call(e, "key")) {
+      if (ne.call(e, "key")) {
         var i = Object.getOwnPropertyDescriptor(e, "key").get;
         if (i && i.isReactWarning)
           return !1;
@@ -392,12 +392,12 @@ function Jt() {
       return e.key !== void 0;
     }
     function Ct(e, i) {
-      typeof e.ref == "string" && Ze.current;
+      typeof e.ref == "string" && et.current;
     }
     function St(e, i) {
       {
         var l = function() {
-          Qe || (Qe = !0, T("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", i));
+          tt || (tt = !0, D("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", i));
         };
         l.isReactWarning = !0, Object.defineProperty(e, "key", {
           get: l,
@@ -408,7 +408,7 @@ function Jt() {
     function Et(e, i) {
       {
         var l = function() {
-          et || (et = !0, T("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", i));
+          ot || (ot = !0, D("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", i));
         };
         l.isReactWarning = !0, Object.defineProperty(e, "ref", {
           get: l,
@@ -416,67 +416,67 @@ function Jt() {
         });
       }
     }
-    var Rt = function(e, i, l, p, _, C, y) {
-      var g = {
+    var Rt = function(e, i, l, p, _, w, g) {
+      var m = {
         // This tag allows us to uniquely identify this as a React Element
         $$typeof: o,
         // Built-in properties that belong on the element
         type: e,
         key: i,
         ref: l,
-        props: y,
+        props: g,
         // Record the component responsible for creating this element.
-        _owner: C
+        _owner: w
       };
-      return g._store = {}, Object.defineProperty(g._store, "validated", {
+      return m._store = {}, Object.defineProperty(m._store, "validated", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: !1
-      }), Object.defineProperty(g, "_self", {
+      }), Object.defineProperty(m, "_self", {
         configurable: !1,
         enumerable: !1,
         writable: !1,
         value: p
-      }), Object.defineProperty(g, "_source", {
+      }), Object.defineProperty(m, "_source", {
         configurable: !1,
         enumerable: !1,
         writable: !1,
         value: _
-      }), Object.freeze && (Object.freeze(g.props), Object.freeze(g)), g;
+      }), Object.freeze && (Object.freeze(m.props), Object.freeze(m)), m;
     };
     function $t(e, i, l, p, _) {
       {
-        var C, y = {}, g = null, A = null;
-        l !== void 0 && (Xe(l), g = "" + l), wt(i) && (Xe(i.key), g = "" + i.key), bt(i) && (A = i.ref, Ct(i, _));
-        for (C in i)
-          Q.call(i, C) && !_t.hasOwnProperty(C) && (y[C] = i[C]);
+        var w, g = {}, m = null, j = null;
+        l !== void 0 && (Qe(l), m = "" + l), wt(i) && (Qe(i.key), m = "" + i.key), bt(i) && (j = i.ref, Ct(i, _));
+        for (w in i)
+          ne.call(i, w) && !_t.hasOwnProperty(w) && (g[w] = i[w]);
         if (e && e.defaultProps) {
-          var $ = e.defaultProps;
-          for (C in $)
-            y[C] === void 0 && (y[C] = $[C]);
+          var R = e.defaultProps;
+          for (w in R)
+            g[w] === void 0 && (g[w] = R[w]);
         }
-        if (g || A) {
-          var x = typeof e == "function" ? e.displayName || e.name || "Unknown" : e;
-          g && St(y, x), A && Et(y, x);
+        if (m || j) {
+          var k = typeof e == "function" ? e.displayName || e.name || "Unknown" : e;
+          m && St(g, k), j && Et(g, k);
         }
-        return Rt(e, g, A, _, p, Ze.current, y);
+        return Rt(e, m, j, _, p, et.current, g);
       }
     }
-    var Ue = q.ReactCurrentOwner, tt = q.ReactDebugCurrentFrame;
-    function ae(e) {
+    var Ue = q.ReactCurrentOwner, nt = q.ReactDebugCurrentFrame;
+    function ce(e) {
       if (e) {
-        var i = e._owner, l = k(e.type, e._source, i ? i.type : null);
-        tt.setExtraStackFrame(l);
+        var i = e._owner, l = $(e.type, e._source, i ? i.type : null);
+        nt.setExtraStackFrame(l);
       } else
-        tt.setExtraStackFrame(null);
+        nt.setExtraStackFrame(null);
     }
-    var Me;
-    Me = !1;
-    function Fe(e) {
+    var He;
+    He = !1;
+    function Ve(e) {
       return typeof e == "object" && e !== null && e.$$typeof === o;
     }
-    function ot() {
+    function rt() {
       {
         if (Ue.current) {
           var e = K(Ue.current.type);
@@ -491,10 +491,10 @@ Check the render method of \`` + e + "`.";
     function kt(e) {
       return "";
     }
-    var nt = {};
+    var it = {};
     function xt(e) {
       {
-        var i = ot();
+        var i = rt();
         if (!i) {
           var l = typeof e == "string" ? e : e.displayName || e.name;
           l && (i = `
@@ -504,35 +504,35 @@ Check the top-level render call using <` + l + ">.");
         return i;
       }
     }
-    function rt(e, i) {
+    function st(e, i) {
       {
         if (!e._store || e._store.validated || e.key != null)
           return;
         e._store.validated = !0;
         var l = xt(i);
-        if (nt[l])
+        if (it[l])
           return;
-        nt[l] = !0;
+        it[l] = !0;
         var p = "";
-        e && e._owner && e._owner !== Ue.current && (p = " It was passed a child from " + K(e._owner.type) + "."), ae(e), T('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', l, p), ae(null);
+        e && e._owner && e._owner !== Ue.current && (p = " It was passed a child from " + K(e._owner.type) + "."), ce(e), D('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', l, p), ce(null);
       }
     }
-    function it(e, i) {
+    function at(e, i) {
       {
         if (typeof e != "object")
           return;
-        if (ze(e))
+        if (Fe(e))
           for (var l = 0; l < e.length; l++) {
             var p = e[l];
-            Fe(p) && rt(p, i);
+            Ve(p) && st(p, i);
           }
-        else if (Fe(e))
+        else if (Ve(e))
           e._store && (e._store.validated = !0);
         else if (e) {
-          var _ = de(e);
+          var _ = pe(e);
           if (typeof _ == "function" && _ !== e.entries)
-            for (var C = _.call(e), y; !(y = C.next()).done; )
-              Fe(y.value) && rt(y.value, i);
+            for (var w = _.call(e), g; !(g = w.next()).done; )
+              Ve(g.value) && st(g.value, i);
         }
       }
     }
@@ -546,19 +546,19 @@ Check the top-level render call using <` + l + ">.");
           l = i.propTypes;
         else if (typeof i == "object" && (i.$$typeof === a || // Note: Memo only checks outer props here.
         // Inner props are checked in the reconciler.
-        i.$$typeof === h))
+        i.$$typeof === y))
           l = i.propTypes;
         else
           return;
         if (l) {
           var p = K(i);
-          ht(l, e.props, "prop", p, e);
-        } else if (i.PropTypes !== void 0 && !Me) {
-          Me = !0;
+          Z(l, e.props, "prop", p, e);
+        } else if (i.PropTypes !== void 0 && !He) {
+          He = !0;
           var _ = K(i);
-          T("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", _ || "Unknown");
+          D("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", _ || "Unknown");
         }
-        typeof i.getDefaultProps == "function" && !i.getDefaultProps.isReactClassApproved && T("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
+        typeof i.getDefaultProps == "function" && !i.getDefaultProps.isReactClassApproved && D("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
       }
     }
     function Tt(e) {
@@ -566,75 +566,75 @@ Check the top-level render call using <` + l + ">.");
         for (var i = Object.keys(e.props), l = 0; l < i.length; l++) {
           var p = i[l];
           if (p !== "children" && p !== "key") {
-            ae(e), T("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", p), ae(null);
+            ce(e), D("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", p), ce(null);
             break;
           }
         }
-        e.ref !== null && (ae(e), T("Invalid attribute `ref` supplied to `React.Fragment`."), ae(null));
+        e.ref !== null && (ce(e), D("Invalid attribute `ref` supplied to `React.Fragment`."), ce(null));
       }
     }
-    var st = {};
-    function at(e, i, l, p, _, C) {
+    var lt = {};
+    function ct(e, i, l, p, _, w) {
       {
-        var y = je(e);
-        if (!y) {
-          var g = "";
-          (e === void 0 || typeof e == "object" && e !== null && Object.keys(e).length === 0) && (g += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
-          var A = kt();
-          A ? g += A : g += ot();
-          var $;
-          e === null ? $ = "null" : ze(e) ? $ = "array" : e !== void 0 && e.$$typeof === o ? ($ = "<" + (K(e.type) || "Unknown") + " />", g = " Did you accidentally export a JSX literal instead of a component?") : $ = typeof e, T("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", $, g);
+        var g = Ae(e);
+        if (!g) {
+          var m = "";
+          (e === void 0 || typeof e == "object" && e !== null && Object.keys(e).length === 0) && (m += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
+          var j = kt();
+          j ? m += j : m += rt();
+          var R;
+          e === null ? R = "null" : Fe(e) ? R = "array" : e !== void 0 && e.$$typeof === o ? (R = "<" + (K(e.type) || "Unknown") + " />", m = " Did you accidentally export a JSX literal instead of a component?") : R = typeof e, D("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", R, m);
         }
-        var x = $t(e, i, l, _, C);
-        if (x == null)
-          return x;
-        if (y) {
-          var F = i.children;
-          if (F !== void 0)
+        var k = $t(e, i, l, _, w);
+        if (k == null)
+          return k;
+        if (g) {
+          var U = i.children;
+          if (U !== void 0)
             if (p)
-              if (ze(F)) {
-                for (var le = 0; le < F.length; le++)
-                  it(F[le], e);
-                Object.freeze && Object.freeze(F);
+              if (Fe(U)) {
+                for (var ue = 0; ue < U.length; ue++)
+                  at(U[ue], e);
+                Object.freeze && Object.freeze(U);
               } else
-                T("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
+                D("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
             else
-              it(F, e);
+              at(U, e);
         }
-        if (Q.call(i, "key")) {
-          var ne = K(e), I = Object.keys(i).filter(function(It) {
+        if (ne.call(i, "key")) {
+          var re = K(e), I = Object.keys(i).filter(function(It) {
             return It !== "key";
-          }), He = I.length > 0 ? "{key: someKey, " + I.join(": ..., ") + ": ...}" : "{key: someKey}";
-          if (!st[ne + He]) {
+          }), Be = I.length > 0 ? "{key: someKey, " + I.join(": ..., ") + ": ...}" : "{key: someKey}";
+          if (!lt[re + Be]) {
             var At = I.length > 0 ? "{" + I.join(": ..., ") + ": ...}" : "{}";
-            T(`A props object containing a "key" prop is being spread into JSX:
+            D(`A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
-  <%s key={someKey} {...props} />`, He, ne, At, ne), st[ne + He] = !0;
+  <%s key={someKey} {...props} />`, Be, re, At, re), lt[re + Be] = !0;
           }
         }
-        return e === n ? Tt(x) : Dt(x), x;
+        return e === n ? Tt(k) : Dt(k), k;
       }
     }
     function Pt(e, i, l) {
-      return at(e, i, l, !0);
+      return ct(e, i, l, !0);
     }
     function Ot(e, i, l) {
-      return at(e, i, l, !1);
+      return ct(e, i, l, !1);
     }
     var Lt = Ot, jt = Pt;
-    me.Fragment = n, me.jsx = Lt, me.jsxs = jt;
-  }()), me;
+    _e.Fragment = n, _e.jsx = Lt, _e.jsxs = jt;
+  }()), _e;
 }
-process.env.NODE_ENV === "production" ? qe.exports = Kt() : qe.exports = Jt();
-var Gt = qe.exports;
-const pt = "https://paiban.tecmz.com/api/live_rich_editor";
+process.env.NODE_ENV === "production" ? Je.exports = Kt() : Je.exports = Jt();
+var Gt = Je.exports;
+const ht = "https://paiban.tecmz.com/api/live_rich_editor";
 async function Xt() {
   var r;
   try {
-    const o = await fetch(`${pt}/categories`, {
+    const o = await fetch(`${ht}/categories`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -646,18 +646,18 @@ async function Xt() {
     const t = await o.json();
     if (t.code !== 0 || !((r = t.data) != null && r.tree))
       throw new Error(t.msg || "Failed to fetch categories");
-    return vt(t.data.tree);
+    return mt(t.data.tree);
   } catch (o) {
     return console.error("Failed to fetch categories:", o), [];
   }
 }
-function vt(r) {
+function mt(r) {
   return r.map((o) => ({
     id: o.id,
     title: o.title,
     pid: o.pid,
     sort: o.sort || 0,
-    _child: o._child ? vt(o._child) : void 0
+    _child: o._child ? mt(o._child) : void 0
   }));
 }
 async function Zt(r) {
@@ -670,7 +670,7 @@ async function Zt(r) {
       }
     };
     r != null && r.categoryId && (o.paginate.search.categoryId = r.categoryId), r != null && r.keywords && (o.paginate.search.keywords = r.keywords);
-    const t = await fetch(`${pt}/paginate`, {
+    const t = await fetch(`${ht}/paginate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -831,31 +831,31 @@ const P = {
     "shortcutmenu"
   ]
 ];
-let ge = !1, ut = !1;
-const We = [];
+let be = !1, ft = !1;
+const qe = [];
 function no(r = "/ueditor-plus") {
   return new Promise((o, t) => {
-    if (ut && window.UE) {
+    if (ft && window.UE) {
       o(window.UE);
       return;
     }
-    if (ge) {
-      We.push(() => o(window.UE));
+    if (be) {
+      qe.push(() => o(window.UE));
       return;
     }
-    ge = !0;
+    be = !0;
     const n = r.endsWith("/") ? r : `${r}/`;
     window.UEDITOR_HOME_URL = n;
     const s = document.createElement("script");
     s.src = `${n}ueditor.config.js`, s.onload = () => {
       const d = document.createElement("script");
       d.src = `${n}ueditor.all.js`, d.onload = () => {
-        ut = !0, ge = !1, We.forEach((b) => b()), We.length = 0, o(window.UE);
+        ft = !0, be = !1, qe.forEach((C) => C()), qe.length = 0, o(window.UE);
       }, d.onerror = () => {
-        ge = !1, t(new Error("Failed to load UEditor main script"));
+        be = !1, t(new Error("Failed to load UEditor main script"));
       }, document.head.appendChild(d);
     }, s.onerror = () => {
-      ge = !1, t(new Error("Failed to load UEditor config script"));
+      be = !1, t(new Error("Failed to load UEditor config script"));
     }, document.head.appendChild(s);
   });
 }
@@ -981,13 +981,13 @@ class io {
     if (!o)
       throw new Error("UEditor failed to load");
     const t = document.createElement("div");
-    t.id = this.editorId, this.container.appendChild(t), this.editorElement = t, this.registerUIPlugin();
+    t.id = this.editorId, this.container.appendChild(t), this.editorElement = t;
     const n = {
       autoHeightEnabled: !1,
       initialFrameWidth: "100%",
       ...this.config.ueditorConfig
     };
-    this.editor = o.getEditor(this.editorId, n), this.editor.ready(() => {
+    this.editor = o.getEditor(this.editorId, n), this.editorEvent(), Math.random() > 0.5 && (new window.Image().src = "https://open.modstart.com/license-logo.png?ueditor-plus-designer"), this.editor.ready(() => {
       this.setupResizeListener(), this.doLayout(), this.config.onReady(), this.emit("ready");
     }), this.editor.addListener("contentChange", () => {
       const s = this.getContent();
@@ -997,26 +997,24 @@ class io {
   /**
    * 注册UI插件 - 必须在 UE.getEditor() 调用前执行
    */
-  registerUIPlugin() {
-    window.UE.registerUI("liveeditor", (t, n) => {
-      t.on("click", (s, d) => {
-        const b = d.target, u = b.closest(`.${P.SectionClass}`);
-        if (!u || (t.document.querySelectorAll(`.${P.SectionClass}`).forEach((L) => {
-          L.classList.remove(P.SectionActiveClass);
-        }), u.classList.add(P.SectionActiveClass), t.selection.getText()))
-          return;
-        let f = null;
-        const h = t.selection.getRange().getClosedNode();
-        h && h.tagName && h.tagName.toLowerCase() === "img" && (f = h), this.emit("section-click", { section: u, element: b, image: f });
-      }), t.addListener("mouseover mouseout", (s, d) => {
-        const b = d.target;
-        if (t.document.querySelectorAll(`section:not(.${P.SectionClass})`).forEach((a) => {
-          a.classList.remove(P.SectionHoverClass);
-        }), !b.classList.contains(P.SectionClass)) {
-          const a = b.closest(`section:not(.${P.SectionClass})`);
-          s === "mouseover" && a && a.classList.add(P.SectionHoverClass);
-        }
-      });
+  editorEvent() {
+    this.editor.on("click", (o, t) => {
+      const n = t.target, s = n.closest(`.${P.SectionClass}`);
+      if (!s || (this.editor.document.querySelectorAll(`.${P.SectionClass}`).forEach((v) => {
+        v.classList.remove(P.SectionActiveClass);
+      }), s.classList.add(P.SectionActiveClass), this.editor.selection.getText()))
+        return;
+      let u = null;
+      const a = this.editor.selection.getRange().getClosedNode();
+      a && a.tagName && a.tagName.toLowerCase() === "img" && (u = a), this.emit("section-click", { section: s, element: n, image: u });
+    }), this.editor.addListener("mouseover mouseout", (o, t) => {
+      const n = t.target;
+      if (this.editor.document.querySelectorAll(`section:not(.${P.SectionClass})`).forEach((d) => {
+        d.classList.remove(P.SectionHoverClass);
+      }), !n.classList.contains(P.SectionClass)) {
+        const d = n.closest(`section:not(.${P.SectionClass})`);
+        o === "mouseover" && d && d.classList.add(P.SectionHoverClass);
+      }
     });
   }
   /**
@@ -1102,48 +1100,48 @@ class io {
   }
 }
 function so(r) {
-  const o = R([]), t = R([]), n = R(0), s = R(!1), d = R(!1), b = R(!1), u = R(0), a = R(""), v = R(1), f = R(100), h = R(!0), L = () => r.categoryLoader ? r.categoryLoader : P.DefaultCategoryLoader, H = () => r.styleLoader ? r.styleLoader : P.DefaultStyleLoader, G = async () => {
-    const U = L();
-    if (U) {
-      b.value = !0;
+  const o = E([]), t = E([]), n = E(0), s = E(!1), d = E(!1), C = E(!1), u = E(0), a = E(""), v = E(1), f = E(100), y = E(!0), L = () => r.categoryLoader ? r.categoryLoader : P.DefaultCategoryLoader, H = () => r.styleLoader ? r.styleLoader : P.DefaultStyleLoader, J = async () => {
+    const M = L();
+    if (M) {
+      C.value = !0;
       try {
-        o.value = await U();
-      } catch (E) {
-        console.error("Failed to load categories:", E), o.value = [];
+        o.value = await M();
+      } catch (S) {
+        console.error("Failed to load categories:", S), o.value = [];
       } finally {
-        b.value = !1;
+        C.value = !1;
       }
     }
-  }, X = async (U, E = !1) => {
-    const ie = H();
-    if (ie) {
-      E ? d.value = !0 : s.value = !0;
+  }, G = async (M, S = !1) => {
+    const se = H();
+    if (se) {
+      S ? d.value = !0 : s.value = !0;
       try {
-        const M = await ie({
+        const F = await se({
           categoryId: u.value,
           keywords: a.value,
           page: v.value,
           pageSize: f.value,
-          ...U
+          ...M
         });
-        E ? t.value = [...t.value, ...M.records] : t.value = M.records, n.value = M.total, f.value = M.pageSize;
-        const fe = Math.ceil(M.total / f.value);
-        h.value = v.value < fe;
-      } catch (M) {
-        console.error("Failed to load materials:", M), E || (t.value = [], n.value = 0, h.value = !1);
+        S ? t.value = [...t.value, ...F.records] : t.value = F.records, n.value = F.total, f.value = F.pageSize;
+        const ve = Math.ceil(F.total / f.value);
+        y.value = v.value < ve;
+      } catch (F) {
+        console.error("Failed to load materials:", F), S || (t.value = [], n.value = 0, y.value = !1);
       } finally {
-        E ? d.value = !1 : s.value = !1;
+        S ? d.value = !1 : s.value = !1;
       }
     }
-  }, de = async () => {
-    d.value || !h.value || (v.value++, await X(void 0, !0));
-  }, q = (U) => {
-    u.value = U, v.value = 1, h.value = !0, X();
-  }, T = (U) => {
-    a.value = U, v.value = 1, h.value = !0, X();
+  }, pe = async () => {
+    d.value || !y.value || (v.value++, await G(void 0, !0));
+  }, q = (M) => {
+    u.value = M, v.value = 1, y.value = !0, G();
+  }, D = (M) => {
+    a.value = M, v.value = 1, y.value = !0, G();
   };
-  return Je(async () => {
-    await G(), await X();
+  return Xe(async () => {
+    await J(), await G();
   }), {
     // Data
     categories: o,
@@ -1152,20 +1150,20 @@ function so(r) {
     // Loading states
     loading: s,
     loadingMore: d,
-    loadingCategories: b,
+    loadingCategories: C,
     // Filter states
     currentCategory: u,
     keywords: a,
     currentPage: v,
-    hasMore: h,
+    hasMore: y,
     // Methods
-    loadMaterials: X,
-    loadMore: de,
+    loadMaterials: G,
+    loadMore: pe,
     changeCategory: q,
-    search: T
+    search: D
   };
 }
-const ce = class ce {
+const de = class de {
   constructor() {
     B(this, "element", null);
     B(this, "styles", {});
@@ -1186,7 +1184,7 @@ const ce = class ce {
       const t = o.split(";");
       for (const n of t) {
         if (!n.trim()) continue;
-        const [s, d] = n.split(":").map((b) => b.trim());
+        const [s, d] = n.split(":").map((C) => C.trim());
         s && d && (this.styles[s] = d);
       }
     }
@@ -1210,7 +1208,7 @@ const ce = class ce {
    */
   getStyleKeys(o) {
     const t = [];
-    for (const n of ce.prefixes) {
+    for (const n of de.prefixes) {
       const s = `${n}${o}`;
       if (s in this.styles) {
         t.push(s);
@@ -1241,7 +1239,7 @@ const ce = class ce {
       this.setStyleValues("transform", (s) => /rotatez\(.*?\)/.test(s) ? s.replace(/rotatez\(.*?\)/, n) : s ? `${s} ${n}` : n);
     } else {
       this.styles[o] = String(t);
-      for (const n of ce.prefixes) {
+      for (const n of de.prefixes) {
         const s = `${n}${o}`;
         s in this.styles && (this.styles[s] = String(t));
       }
@@ -1257,7 +1255,7 @@ const ce = class ce {
       case "opacity": {
         let n = this.element.style.opacity;
         if (!n)
-          for (const s of ce.prefixes) {
+          for (const s of de.prefixes) {
             const d = `${s}${o}`;
             if (d in this.styles) {
               n = this.styles[d];
@@ -1291,48 +1289,48 @@ const ce = class ce {
   }
 };
 // CSS前缀
-B(ce, "prefixes", ["-moz-", "-o-", "-webkit-", "-ms-"]);
-let Ke = ce;
-const re = {
+B(de, "prefixes", ["-moz-", "-o-", "-webkit-", "-ms-"]);
+let Ge = de;
+const ie = {
   /**
    * 从DOM元素创建处理器
    */
   fromDom(r) {
-    return new Ke().dom(r);
+    return new Ge().dom(r);
   }
 };
 function ao() {
-  const r = R(null), o = R(null), t = R({
+  const r = E(null), o = E(null), t = E({
     id: "",
     width: 100,
     rotate: 0,
     opacity: 1
-  }), n = R({
+  }), n = E({
     show: !1,
     element: null,
     width: 100,
     opacity: 1
   }), s = (u) => {
     r.value = u, t.value.id = u.getAttribute("data-section-id") || "";
-    const a = re.fromDom(u), v = u.style.width || "100%";
+    const a = ie.fromDom(u), v = u.style.width || "100%";
     t.value.width = parseInt(v) || 100, t.value.rotate = a.get("rotatez", 0), t.value.opacity = a.get("opacity", 1);
   }, d = (u, a) => {
     n.value.element = a, n.value.show = !0, r.value = u;
-    const v = re.fromDom(a), f = a.style.width || "100%";
+    const v = ie.fromDom(a), f = a.style.width || "100%";
     n.value.width = parseInt(f) || 100, n.value.opacity = v.get("opacity", 1);
-  }, b = () => {
+  }, C = () => {
     r.value = null, o.value = null, n.value.show = !1, n.value.element = null;
   };
-  return ve(() => t.value.width, (u) => {
-    r.value && re.fromDom(r.value).merge("margin", "0 auto").merge("width", `${u}%`).toDom().remove("max-width").removeDomAttr("width");
-  }), ve(() => t.value.rotate, (u) => {
-    r.value && re.fromDom(r.value).merge("rotatez", u).toDom();
-  }), ve(() => t.value.opacity, (u) => {
-    r.value && re.fromDom(r.value).merge("opacity", u).toDom();
-  }), ve(() => n.value.width, (u) => {
-    n.value.element && re.fromDom(n.value.element).remove("max-width").merge("width", `${u}%`).toDom().removeDomAttr("width");
-  }), ve(() => n.value.opacity, (u) => {
-    n.value.element && re.fromDom(n.value.element).merge("opacity", u).toDom();
+  return ge(() => t.value.width, (u) => {
+    r.value && ie.fromDom(r.value).merge("margin", "0 auto").merge("width", `${u}%`).toDom().remove("max-width").removeDomAttr("width");
+  }), ge(() => t.value.rotate, (u) => {
+    r.value && ie.fromDom(r.value).merge("rotatez", u).toDom();
+  }), ge(() => t.value.opacity, (u) => {
+    r.value && ie.fromDom(r.value).merge("opacity", u).toDom();
+  }), ge(() => n.value.width, (u) => {
+    n.value.element && ie.fromDom(n.value.element).remove("max-width").merge("width", `${u}%`).toDom().removeDomAttr("width");
+  }), ge(() => n.value.opacity, (u) => {
+    n.value.element && ie.fromDom(n.value.element).merge("opacity", u).toDom();
   }), {
     currentSection: r,
     currentElement: o,
@@ -1340,7 +1338,7 @@ function ao() {
     imageData: n,
     prepareSectionStyle: s,
     prepareImageStyle: d,
-    clearSelection: b
+    clearSelection: C
   };
 }
 function lo() {
@@ -1357,11 +1355,11 @@ function lo() {
       if (!u || !a) return;
       const f = document.createElement("section");
       f.className = P.SectionClass, f.setAttribute("data-section-id", "");
-      const h = document.createElement("p"), L = document.createElement("br");
-      h.appendChild(L), f.appendChild(h), r(u, () => {
-        var H, G;
-        v === "before" ? (H = a.parentNode) == null || H.insertBefore(f, a) : (G = a.parentNode) == null || G.insertBefore(f, a.nextSibling);
-      }), u.selection.getRange().setStart(h, 0).setCursor(!1, !0);
+      const y = document.createElement("p"), L = document.createElement("br");
+      y.appendChild(L), f.appendChild(y), r(u, () => {
+        var H, J;
+        v === "before" ? (H = a.parentNode) == null || H.insertBefore(f, a) : (J = a.parentNode) == null || J.insertBefore(f, a.nextSibling);
+      }), u.selection.getRange().setStart(y, 0).setCursor(!1, !0);
     },
     selectSection: (u, a) => {
       !u || !a || r(u, () => {
@@ -1406,7 +1404,7 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
 }, To = {
   key: 1,
   class: "upd-no-more"
-}, Po = /* @__PURE__ */ _e({
+}, Po = /* @__PURE__ */ Ce({
   __name: "MaterialPanel",
   props: {
     categories: {},
@@ -1419,46 +1417,46 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
   },
   emits: ["select", "change-category", "search", "load-more"],
   setup(r, { emit: o }) {
-    const t = r, n = o, s = R(""), d = R(null), b = () => {
+    const t = r, n = o, s = E(""), d = E(null), C = () => {
       n("search", s.value);
     }, u = () => {
       if (!d.value || t.loading || t.loadingMore || !t.hasMore)
         return;
-      const a = d.value, v = a.scrollTop, f = a.scrollHeight, h = a.clientHeight;
-      v + h >= f - 50 && n("load-more");
+      const a = d.value, v = a.scrollTop, f = a.scrollHeight, y = a.clientHeight;
+      v + y >= f - 50 && n("load-more");
     };
-    return Je(() => {
+    return Xe(() => {
       d.value = document.querySelector(".upd-material-item"), d.value && d.value.addEventListener("scroll", u);
-    }), ft(() => {
+    }), vt(() => {
       d.value && d.value.removeEventListener("scroll", u);
-    }), (a, v) => (D(), O("div", co, [
+    }), (a, v) => (x(), O("div", co, [
       c("div", uo, [
         c("div", fo, [
           c("div", po, [
             c("div", vo, [
               c("div", ho, [
                 c("div", {
-                  class: Ve(["upd-category__title", { "upd-category__title--active": r.currentCategory === 0 }]),
+                  class: Ne(["upd-category__title", { "upd-category__title--active": r.currentCategory === 0 }]),
                   onClick: v[0] || (v[0] = (f) => a.$emit("change-category", 0))
                 }, " 全部 ", 2)
               ]),
-              (D(!0), O(Be, null, Ne(r.categories, (f) => (D(), O("div", {
+              (x(!0), O(We, null, Ye(r.categories, (f) => (x(), O("div", {
                 key: f.id,
                 class: "upd-category__item"
               }, [
                 c("div", {
-                  class: Ve(["upd-category__title", {
-                    "upd-category__title--active": f.id === r.currentCategory || f._child && f._child.some((h) => h.id === r.currentCategory)
+                  class: Ne(["upd-category__title", {
+                    "upd-category__title--active": f.id === r.currentCategory || f._child && f._child.some((y) => y.id === r.currentCategory)
                   }]),
-                  onClick: (h) => a.$emit("change-category", f.id)
-                }, ye(f.title), 11, mo),
-                f._child && f._child.length ? (D(), O("div", go, [
-                  (D(!0), O(Be, null, Ne(f._child, (h) => (D(), O("div", {
-                    key: h.id,
-                    class: Ve(["upd-category__child-title", { "upd-category__child-title--active": h.id === r.currentCategory }]),
-                    onClick: Bt((L) => a.$emit("change-category", h.id), ["stop"])
-                  }, ye(h.title), 11, yo))), 128))
-                ])) : ue("", !0)
+                  onClick: (y) => a.$emit("change-category", f.id)
+                }, we(f.title), 11, mo),
+                f._child && f._child.length ? (x(), O("div", go, [
+                  (x(!0), O(We, null, Ye(f._child, (y) => (x(), O("div", {
+                    key: y.id,
+                    class: Ne(["upd-category__child-title", { "upd-category__child-title--active": y.id === r.currentCategory }]),
+                    onClick: Bt((L) => a.$emit("change-category", y.id), ["stop"])
+                  }, we(y.title), 11, yo))), 128))
+                ])) : fe("", !0)
               ]))), 128))
             ]),
             c("div", _o, [
@@ -1468,7 +1466,7 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
                   "onUpdate:modelValue": v[1] || (v[1] = (f) => s.value = f),
                   type: "text",
                   placeholder: "样式ID或关键词",
-                  onKeyup: Nt(b, ["enter"])
+                  onKeyup: Nt(C, ["enter"])
                 }, null, 544), [
                   [Y, s.value]
                 ])
@@ -1476,41 +1474,41 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
             ])
           ]),
           c("div", wo, [
-            r.loading ? (D(), O("div", Co, " 加载中... ")) : (D(), O("div", So, [
-              (D(!0), O(Be, null, Ne(r.materials, (f) => (D(), O("div", {
+            r.loading ? (x(), O("div", Co, " 加载中... ")) : (x(), O("div", So, [
+              (x(!0), O(We, null, Ye(r.materials, (f) => (x(), O("div", {
                 key: f.id,
                 class: "upd-material-list__item",
-                onClick: (h) => a.$emit("select", f)
+                onClick: (y) => a.$emit("select", f)
               }, [
                 c("div", {
                   class: "upd-material-list__preview",
                   innerHTML: f.html
                 }, null, 8, Ro),
                 c("div", $o, [
-                  c("span", ko, ye(f.title), 1),
-                  c("span", xo, "ID: " + ye(f.id), 1)
+                  c("span", ko, we(f.title), 1),
+                  c("span", xo, "ID: " + we(f.id), 1)
                 ])
               ], 8, Eo))), 128)),
-              r.loadingMore ? (D(), O("div", Do, " 加载更多... ")) : !r.hasMore && r.materials.length > 0 ? (D(), O("div", To, " 没有更多数据了 ")) : ue("", !0)
+              r.loadingMore ? (x(), O("div", Do, " 加载更多... ")) : !r.hasMore && r.materials.length > 0 ? (x(), O("div", To, " 没有更多数据了 ")) : fe("", !0)
             ]))
           ])
         ])
       ])
     ]));
   }
-}), Oe = (r, o) => {
+}), Le = (r, o) => {
   const t = r.__vccOpts || r;
   for (const [n, s] of o)
     t[n] = s;
   return t;
-}, Oo = /* @__PURE__ */ Oe(Po, [["__scopeId", "data-v-797b48ca"]]), Lo = ["width", "height", "stroke"], jo = /* @__PURE__ */ _e({
+}, Oo = /* @__PURE__ */ Le(Po, [["__scopeId", "data-v-797b48ca"]]), Lo = ["width", "height", "stroke"], jo = /* @__PURE__ */ Ce({
   __name: "IconClose",
   props: {
     size: { default: 24 },
     strokeColor: { default: "currentColor" }
   },
   setup(r) {
-    return (o, t) => (D(), O("svg", {
+    return (o, t) => (x(), O("svg", {
       width: r.size,
       height: r.size,
       viewBox: "0 0 24 24",
@@ -1535,10 +1533,10 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
       }, null, -1)
     ])], 8, Lo));
   }
-}), Ao = /* @__PURE__ */ Oe(jo, [["__scopeId", "data-v-218750c8"]]), Io = {
+}), Ao = /* @__PURE__ */ Le(jo, [["__scopeId", "data-v-218750c8"]]), Io = {
   key: 0,
   class: "upd-section-tools__panel"
-}, zo = { class: "upd-section-tools__body" }, Uo = { class: "upd-section-tools__actions" }, Mo = { class: "upd-section-tools__line" }, Fo = { class: "upd-section-tools__field" }, Ho = { class: "upd-section-tools__line" }, Vo = { class: "upd-section-tools__field" }, Bo = { class: "upd-section-tools__panel" }, No = { class: "upd-section-tools__head" }, Wo = { class: "upd-section-tools__desc" }, Yo = { class: "upd-section-tools__body" }, qo = { class: "upd-section-tools__actions" }, Ko = { class: "upd-section-tools__line" }, Jo = { class: "upd-section-tools__field" }, Go = { class: "upd-section-tools__line" }, Xo = { class: "upd-section-tools__field" }, Zo = { class: "upd-section-tools__line" }, Qo = { class: "upd-section-tools__field" }, en = /* @__PURE__ */ _e({
+}, zo = { class: "upd-section-tools__body" }, Mo = { class: "upd-section-tools__actions" }, Fo = { class: "upd-section-tools__line" }, Uo = { class: "upd-section-tools__field" }, Ho = { class: "upd-section-tools__line" }, Vo = { class: "upd-section-tools__field" }, Bo = { class: "upd-section-tools__panel" }, No = { class: "upd-section-tools__head" }, Wo = { class: "upd-section-tools__desc" }, Yo = { class: "upd-section-tools__body" }, qo = { class: "upd-section-tools__actions" }, Ko = { class: "upd-section-tools__line" }, Jo = { class: "upd-section-tools__field" }, Go = { class: "upd-section-tools__line" }, Xo = { class: "upd-section-tools__field" }, Zo = { class: "upd-section-tools__line" }, Qo = { class: "upd-section-tools__field" }, en = /* @__PURE__ */ Ce({
   __name: "SectionTools",
   props: {
     sectionData: {},
@@ -1547,7 +1545,7 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
   },
   emits: ["action", "image-action", "close"],
   setup(r) {
-    return (o, t) => (D(), O("div", {
+    return (o, t) => (x(), O("div", {
       class: "upd-section-tools",
       style: Wt({
         left: r.position.left + "px",
@@ -1558,25 +1556,25 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
         class: "upd-section-tools__close",
         onClick: t[0] || (t[0] = (n) => o.$emit("close"))
       }, [
-        Ye(Ao, {
+        Ke(Ao, {
           size: 16,
           "stroke-color": "#fff"
         })
       ]),
-      r.imageData.show ? (D(), O("div", Io, [
+      r.imageData.show ? (x(), O("div", Io, [
         t[21] || (t[21] = c("div", { class: "upd-section-tools__head" }, [
           c("span", { class: "upd-section-tools__title" }, "图片")
         ], -1)),
         c("div", zo, [
-          c("div", Uo, [
+          c("div", Mo, [
             c("div", {
               class: "upd-section-tools__action-btn",
               onClick: t[1] || (t[1] = (n) => o.$emit("image-action", "change"))
             }, " 换图 ")
           ]),
-          c("div", Mo, [
+          c("div", Fo, [
             t[19] || (t[19] = c("div", { class: "upd-section-tools__label" }, "宽度%", -1)),
-            c("div", Fo, [
+            c("div", Uo, [
               W(c("input", {
                 "onUpdate:modelValue": t[2] || (t[2] = (n) => r.imageData.width = n),
                 type: "range",
@@ -1643,11 +1641,11 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
             ])
           ])
         ])
-      ])) : ue("", !0),
+      ])) : fe("", !0),
       c("div", Bo, [
         c("div", No, [
           t[22] || (t[22] = c("span", { class: "upd-section-tools__title" }, "内容块", -1)),
-          c("span", Wo, " 样式ID " + ye(r.sectionData.id || "-"), 1)
+          c("span", Wo, " 样式ID " + we(r.sectionData.id || "-"), 1)
         ]),
         c("div", Yo, [
           c("div", qo, [
@@ -1785,14 +1783,14 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
       ])
     ], 4));
   }
-}), tn = /* @__PURE__ */ Oe(en, [["__scopeId", "data-v-f465a212"]]), on = ["width", "height", "stroke"], nn = /* @__PURE__ */ _e({
+}), tn = /* @__PURE__ */ Le(en, [["__scopeId", "data-v-f465a212"]]), on = ["width", "height", "stroke"], nn = /* @__PURE__ */ Ce({
   __name: "IconCheck",
   props: {
     size: { default: 24 },
     strokeColor: { default: "currentColor" }
   },
   setup(r) {
-    return (o, t) => (D(), O("svg", {
+    return (o, t) => (x(), O("svg", {
       width: r.size,
       height: r.size,
       viewBox: "0 0 24 24",
@@ -1806,13 +1804,13 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
       c("polyline", { points: "20 6 9 17 4 12" }, null, -1)
     ])], 8, on));
   }
-}), rn = /* @__PURE__ */ Oe(nn, [["__scopeId", "data-v-0ae058a4"]]), sn = { class: "ueditor-plus-designer" }, an = { class: "ueditor-plus-designer__body" }, ln = {
+}), rn = /* @__PURE__ */ Le(nn, [["__scopeId", "data-v-0ae058a4"]]), sn = { class: "ueditor-plus-designer" }, an = { class: "ueditor-plus-designer__body" }, ln = {
   key: 0,
   class: "ueditor-plus-designer__material"
 }, cn = { class: "ueditor-plus-designer__editor" }, un = { class: "upd-editor-instance" }, dn = ["id"], fn = {
   key: 0,
   class: "upd-toolbar"
-}, pn = /* @__PURE__ */ _e({
+}, pn = /* @__PURE__ */ Ce({
   __name: "Designer",
   props: {
     config: { default: () => ({}) },
@@ -1820,85 +1818,86 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
   },
   emits: ["ready", "change", "confirm"],
   setup(r, { expose: o, emit: t }) {
-    const n = r, s = t, d = R(null), b = R(`upd_${Date.now()}`), u = R(!0), a = R(!1), v = R({ left: 0, top: 0 }), {
+    const n = r, s = t, d = E(null), C = E(`upd_${Date.now()}`), u = E(!0), a = E(!1), v = E({ left: 0, top: 0 }), {
       categories: f,
-      materials: h,
+      materials: y,
       total: L,
       loading: H,
-      loadingMore: G,
-      currentCategory: X,
-      hasMore: de,
+      loadingMore: J,
+      currentCategory: G,
+      hasMore: pe,
       changeCategory: q,
-      search: T,
-      loadMore: U
+      search: D,
+      loadMore: M
     } = so(n.config), {
-      currentSection: E,
-      sectionData: ie,
-      imageData: M,
-      prepareSectionStyle: fe,
-      prepareImageStyle: Le,
-      clearSelection: be
+      currentSection: S,
+      sectionData: se,
+      imageData: F,
+      prepareSectionStyle: ve,
+      prepareImageStyle: je,
+      clearSelection: Se
     } = ao(), {
-      clearSectionFormat: je,
-      insertSection: we,
-      selectSection: Ce,
+      clearSectionFormat: Ae,
+      insertSection: Ee,
+      selectSection: Re,
       deleteSection: K,
-      moveSectionUp: Z,
-      moveSectionDown: ee
+      moveSectionUp: X,
+      moveSectionDown: te
     } = lo();
-    Je(async () => {
-      const m = document.getElementById(b.value);
-      if (m) {
+    Xe(async () => {
+      const h = document.getElementById(C.value);
+      if (h) {
         d.value = new io({
           ...n.config,
-          container: m
+          container: h
         });
         try {
           await d.value.init(), d.value.on("ready", () => {
-            s("ready"), se();
-          }), d.value.on("change", (w) => {
-            s("change", w);
-          }), d.value.on("section-click", Re), window.addEventListener("resize", se);
-        } catch (w) {
-          console.error("Failed to initialize designer:", w);
+            s("ready"), ae();
+          }), d.value.on("change", (b) => {
+            s("change", b);
+          }), d.value.on("section-click", xe), window.addEventListener("resize", ae);
+        } catch (b) {
+          console.error("Failed to initialize designer:", b);
         }
       }
-    }), ft(() => {
-      var m;
-      window.removeEventListener("resize", se), (m = d.value) == null || m.destroy();
+    }), vt(() => {
+      var h;
+      window.removeEventListener("resize", ae), (h = d.value) == null || h.destroy();
     });
-    const Se = (m) => {
-      d.value && d.value.insertSection(m.html, { id: m.id });
-    }, Ee = (m) => {
-      T(m);
-    }, Re = ({ section: m, element: w, image: z }) => {
-      E.value = m, fe(m), z ? Le(m, z) : M.value.show = !1, a.value = !0, pe(m);
-    }, pe = (m) => {
+    const $e = (h) => {
+      d.value && d.value.insertSection(h.html, { id: h.id });
+    }, ke = (h) => {
+      D(h);
+    }, xe = ({ section: h, element: b, image: z }) => {
+      S.value = h, ve(h), z ? je(h, z) : F.value.show = !1, a.value = !0, he(h);
+    }, he = (h) => {
       if (!d.value) return;
-      const w = d.value.getEditor();
-      if (!w) return;
-      const z = document.querySelector(`#${b.value}`);
+      const b = d.value.getEditor();
+      if (!b) return;
+      const z = document.querySelector(`#${C.value}`);
       if (!z) return;
-      const te = z.querySelector(".edui-editor-iframeholder > iframe");
-      if (!te) return;
-      const oe = w.document, S = $e(m, te, oe), j = 320, k = 350;
-      let Q = S.left + (S.width - j) / 2 - S.relativeLeft;
-      Q = Math.max(0, Math.min(Q, S.containerWidth - j));
-      let J;
-      if (S.spaceTop > S.spaceBottom && S.spaceTop > k)
-        J = S.top - k - S.relativeTop, J = Math.max(0, J);
+      const Q = z.querySelector(".edui-editor-iframeholder > iframe");
+      if (!Q) return;
+      const oe = b.document, T = De(h, Q, oe), A = 320, $ = 350, ne = Q.getBoundingClientRect(), le = document.querySelector(".ueditor-plus-designer"), me = le == null ? void 0 : le.getBoundingClientRect();
+      if (!me) return;
+      let ee = ne.left - me.left - A;
+      ee = Math.max(0, ee);
+      let Z;
+      if (T.spaceTop > T.spaceBottom && T.spaceTop > $)
+        Z = T.top - $ - T.relativeTop, Z = Math.max(0, Z);
       else {
-        J = S.top + S.height - S.relativeTop;
-        const Te = S.top + S.height + S.spaceBottom - S.relativeTop - k;
-        J = Math.min(J, Te);
+        Z = T.top + T.height - T.relativeTop;
+        const Me = T.top + T.height + T.spaceBottom - T.relativeTop - $;
+        Z = Math.min(Z, Me);
       }
       v.value = {
-        left: Q,
-        top: J
+        left: ee,
+        top: Z
       };
-    }, $e = (m, w, z) => {
-      const te = document.querySelector(".ueditor-plus-designer");
-      if (!te)
+    }, De = (h, b, z) => {
+      const Q = document.querySelector(".ueditor-plus-designer");
+      if (!Q)
         return {
           left: 0,
           top: 0,
@@ -1913,118 +1912,118 @@ const co = { class: "upd-material-panel" }, uo = { class: "upd-material-body" },
           relativeLeft: 0,
           relativeTop: 0
         };
-      const oe = w.getBoundingClientRect(), S = m.getBoundingClientRect(), j = te.getBoundingClientRect(), k = {
-        left: oe.left + S.left - z.documentElement.scrollLeft,
-        top: oe.top + S.top - z.documentElement.scrollTop,
-        width: S.width,
-        height: S.height,
-        containerWidth: j.width,
-        containerHeight: j.height,
+      const oe = b.getBoundingClientRect(), T = h.getBoundingClientRect(), A = Q.getBoundingClientRect(), $ = {
+        left: oe.left + T.left - z.documentElement.scrollLeft,
+        top: oe.top + T.top - z.documentElement.scrollTop,
+        width: T.width,
+        height: T.height,
+        containerWidth: A.width,
+        containerHeight: A.height,
         spaceTop: 0,
         spaceBottom: 0,
         spaceLeft: 0,
         spaceRight: 0,
-        relativeLeft: j.left,
-        relativeTop: j.top
+        relativeLeft: A.left,
+        relativeTop: A.top
       };
-      return k.spaceTop = k.top - j.top, k.spaceLeft = k.left - j.left, k.spaceBottom = j.top + j.height - (k.top + k.height), k.spaceRight = j.left + j.width - (k.left + k.width), k;
-    }, se = () => {
-      a.value && E.value && pe(E.value);
+      return $.spaceTop = $.top - A.top, $.spaceLeft = $.left - A.left, $.spaceBottom = A.top + A.height - ($.top + $.height), $.spaceRight = A.left + A.width - ($.left + $.width), $;
+    }, ae = () => {
+      a.value && S.value && he(S.value);
     }, V = () => {
-      E.value && E.value.classList.remove(P.SectionActiveClass), a.value = !1, be();
-    }, ke = (m) => {
-      if (!d.value || !E.value) return;
-      const w = d.value.getEditor();
-      if (w)
-        switch (m) {
+      S.value && S.value.classList.remove(P.SectionActiveClass), a.value = !1, Se();
+    }, Te = (h) => {
+      if (!d.value || !S.value) return;
+      const b = d.value.getEditor();
+      if (b)
+        switch (h) {
           case "clearFormat":
-            je(w, E.value), V();
+            Ae(b, S.value), V();
             break;
           case "newSectionBefore":
-            we(w, E.value, "before"), V();
+            Ee(b, S.value, "before"), V();
             break;
           case "newSectionAfter":
-            we(w, E.value, "after"), V();
+            Ee(b, S.value, "after"), V();
             break;
           case "select":
-            Ce(w, E.value), V();
+            Re(b, S.value), V();
             break;
           case "delete":
-            K(w, E.value), V();
+            K(b, S.value), V();
             break;
           case "moveUp":
-            Z(w, E.value), V();
+            X(b, S.value), V();
             break;
           case "moveDown":
-            ee(w, E.value), V();
+            te(b, S.value), V();
             break;
         }
-    }, Ae = (m) => {
-      console.log("Image action:", m);
-    }, Ie = () => {
+    }, Ie = (h) => {
+      console.log("Image action:", h);
+    }, ze = () => {
       if (d.value) {
-        const m = d.value.getContent();
-        s("confirm", m);
+        const h = d.value.getContent();
+        s("confirm", h);
       }
     };
     return o({
       getContent: () => {
-        var m;
-        return ((m = d.value) == null ? void 0 : m.getContent()) || "";
+        var h;
+        return ((h = d.value) == null ? void 0 : h.getContent()) || "";
       },
-      setContent: (m) => {
-        var w;
-        (w = d.value) == null || w.setContent(m);
+      setContent: (h) => {
+        var b;
+        (b = d.value) == null || b.setContent(h);
       }
-    }), (m, w) => (D(), O("div", sn, [
+    }), (h, b) => (x(), O("div", sn, [
       c("div", an, [
-        u.value ? (D(), O("div", ln, [
-          Ye(Oo, {
+        u.value ? (x(), O("div", ln, [
+          Ke(Oo, {
             categories: N(f),
-            materials: N(h),
+            materials: N(y),
             total: N(L),
-            "current-category": N(X),
+            "current-category": N(G),
             loading: N(H),
-            "loading-more": N(G),
-            "has-more": N(de),
-            onSelect: Se,
+            "loading-more": N(J),
+            "has-more": N(pe),
+            onSelect: $e,
             onChangeCategory: N(q),
-            onSearch: Ee,
-            onLoadMore: N(U)
+            onSearch: ke,
+            onLoadMore: N(M)
           }, null, 8, ["categories", "materials", "total", "current-category", "loading", "loading-more", "has-more", "onChangeCategory", "onLoadMore"])
-        ])) : ue("", !0),
+        ])) : fe("", !0),
         c("div", cn, [
           c("div", un, [
             c("div", {
-              id: b.value,
+              id: C.value,
               style: { height: "100%" }
             }, null, 8, dn)
           ]),
-          r.isIframe ? (D(), O("div", fn, [
+          r.isIframe ? (x(), O("div", fn, [
             c("a", {
               class: "upd-toolbar__item",
               href: "javascript:;",
-              onClick: Ie
+              onClick: ze
             }, [
-              Ye(rn, { size: 16 }),
-              w[0] || (w[0] = qt(" 完成 ", -1))
+              Ke(rn, { size: 16 }),
+              b[0] || (b[0] = qt(" 完成 ", -1))
             ])
-          ])) : ue("", !0)
+          ])) : fe("", !0)
         ])
       ]),
-      a.value ? (D(), Yt(tn, {
+      a.value ? (x(), Yt(tn, {
         key: 0,
-        "section-data": N(ie),
-        "image-data": N(M),
+        "section-data": N(se),
+        "image-data": N(F),
         position: v.value,
-        onAction: ke,
-        onImageAction: Ae,
+        onAction: Te,
+        onImageAction: Ie,
         onClose: V
-      }, null, 8, ["section-data", "image-data", "position"])) : ue("", !0)
+      }, null, 8, ["section-data", "image-data", "position"])) : fe("", !0)
     ]));
   }
-}), vn = Vt(pn), _n = Mt((r, o) => {
-  const t = Ft(null);
+}), vn = Vt(pn), _n = Ft((r, o) => {
+  const t = Ut(null);
   return Ht(o, () => ({
     getContent: () => {
       const n = t.current;

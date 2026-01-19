@@ -18,7 +18,7 @@ export declare class DesignerCore implements DesignerInstance {
     /**
      * 注册UI插件 - 必须在 UE.getEditor() 调用前执行
      */
-    private registerUIPlugin;
+    private editorEvent;
     /**
      * 获取内容
      */

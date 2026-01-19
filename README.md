@@ -22,7 +22,7 @@
 - ❌ **源码访问**：查看、修改或分发源代码需要授权
 - ❌ **商业使用**：生产环境部署、商业产品或盈利性项目需要授权
 
-📮 **授权联系**: [modstart@163.com](mailto:modstart@163.com)
+📮 **授权联系**: [授权](https://open.modstart.com/ueditor-plus-designer)
 
 详细条款请查看 [LICENSE](LICENSE) 文件。
 
@@ -43,7 +43,7 @@
 
 ## 📦 安装
 
-> **注意**：以下安装方式获取的是**压缩版（编译后版本）**，可免费用于个人学习和非商业项目。如需商业使用或源码访问，请联系 [modstart@163.com](mailto:modstart@163.com) 获取授权。
+> **注意**：以下安装方式获取的是**压缩版（编译后版本）**，可免费用于个人学习和非商业项目。如需商业使用或源码访问，请联系 [授权](https://open.modstart.com/ueditor-plus-designer) 获取授权。
 
 ### NPM / Yarn
 
@@ -95,11 +95,7 @@ const designerRef = ref()
 
 const config: DesignerConfig = {
   ueditorPath: '/ueditor-plus', // UEditor Plus 资源路径
-  ueditorConfig: {
-    // UEditor Plus 配置项
-    autoHeightEnabled: false,
-    initialFrameHeight: 600
-  }
+  ueditorConfig: {}
 }
 
 const onReady = () => {
@@ -142,10 +138,7 @@ function App() {
 
   const config: DesignerConfig = {
     ueditorPath: '/ueditor-plus',
-    ueditorConfig: {
-      autoHeightEnabled: false,
-      initialFrameHeight: 600
-    }
+    ueditorConfig: {}
   }
 
   const handleReady = () => {
@@ -198,6 +191,7 @@ export default App
     const designer = new UEditorPlusDesigner({
       container: '#designer-container',
       ueditorPath: '/ueditor-plus',
+      ueditorConfig: {},
       onReady: () => {
         console.log('Designer is ready!')
       },
@@ -292,47 +286,9 @@ const config: DesignerConfig = {
 }
 ```
 
-### 数据类型定义
-
-```typescript
-// 素材分类
-interface MaterialCategory {
-  id: number | string
-  title: string
-  pid?: number | string      // 父分类 ID
-  sort?: number             // 排序
-  _child?: MaterialCategory[] // 子分类
-}
-
-// 素材项
-interface MaterialItem {
-  id: number | string
-  title: string
-  html: string              // 素材 HTML 内容
-  categoryId?: number | string
-  cover?: string            // 封面图
-  [key: string]: any
-}
-
-// 分页数据
-interface StyleListData {
-  records: MaterialItem[]   // 素材列表
-  total: number            // 总数
-  page: number             // 当前页
-  pageSize: number         // 每页数量
-}
-
-// 查询参数
-interface MaterialQueryParams {
-  categoryId?: number | string
-  keywords?: string
-  page?: number
-  pageSize?: number
-}
-```
 ## 🛠️ 开发
 
-> **注意**：本项目源码访问需要授权。以下开发说明仅供已获得授权的开发者参考。如需获取源码访问权限，请联系 [modstart@163.com](mailto:modstart@163.com)。
+> **注意**：本项目源码访问需要授权。以下开发说明仅供已获得授权的开发者参考。如需获取源码访问权限，请联系 [授权](https://open.modstart.com/ueditor-plus-designer)。
 
 ### 环境要求
 
@@ -396,54 +352,6 @@ npm run docs:build
 npm run docs:preview
 ```
 
-### 项目结构
-
-```
-ueditor-plus-designer/
-├── src/
-│   ├── components/        # Vue 组件
-│   │   ├── Designer.vue   # 主设计器组件
-│   │   ├── MaterialPanel.vue  # 素材面板
-│   │   ├── SectionTools.vue   # Section 工具栏
-│   │   └── icons/         # 图标组件
-│   ├── composables/       # Vue 组合式函数
-│   │   ├── useMaterial.ts # 素材管理
-│   │   └── useSection.ts  # Section 管理
-│   ├── core/              # 核心逻辑（框架无关）
-│   │   └── DesignerCore.ts
-│   ├── utils/             # 工具函数
-│   │   ├── config.ts      # 配置常量
-│   │   ├── api-loader.ts  # API 加载器
-│   │   └── style-processor.ts  # 样式处理
-│   ├── types/             # TypeScript 类型定义
-│   │   └── index.ts
-│   ├── styles/            # 样式文件
-│   │   └── index.scss
-│   └── index.ts           # 入口文件
-├── examples/              # 示例项目
-│   ├── vue/               # Vue 3 示例
-│   ├── react/             # React 示例
-│   └── html/              # 纯 HTML 示例
-├── doc/                   # 文档
-│   ├── guide/             # 使用指南
-│   ├── api/               # API 文档
-│   └── dev/               # 开发文档
-├── dist/                  # 构建输出
-│   ├── vue/               # Vue 构建产物
-│   ├── react/             # React 构建产物
-│   ├── standalone/        # Standalone 构建产物
-│   ├── demo/              # Demo 构建产物
-│   └── types/             # 类型声明文件
-├── vite.config.ts         # Vite 开发配置
-├── vite.config.vue.ts     # Vue 构建配置
-├── vite.config.react.ts   # React 构建配置
-├── vite.config.demo.ts    # Demo 构建配置
-├── vite.config.standalone.ts  # Standalone 构建配置
-├── tsconfig.json          # TypeScript 配置
-├── package.json
-└── README.md
-```
-
 ## 📝 示例项目
 
 查看完整的使用示例：
@@ -482,7 +390,7 @@ ueditor-plus-designer/
 
 如需商业授权或源码访问权限，请联系：
 
-- **Email**: [modstart@163.com](mailto:modstart@163.com)
+- **Email**: [授权](https://open.modstart.com/ueditor-plus-designer)
 - **GitHub**: [https://github.com/modstart-lib/ueditor-plus-designer](https://github.com/modstart-lib/ueditor-plus-designer)
 
 ### ⚠️ 免责声明
@@ -494,6 +402,5 @@ ueditor-plus-designer/
 如果遇到问题或有任何疑问，欢迎：
 
 - 提交 [Issue](https://github.com/modstart-lib/ueditor-plus-designer/issues)
-- 查看 [文档](./doc/)
 - 参考 [示例项目](./examples/)
 
