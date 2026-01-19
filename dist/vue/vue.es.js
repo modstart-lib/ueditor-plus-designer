@@ -1406,4 +1406,3 @@ export {
   je as useMaterial,
   qe as useSection
 };
-//# sourceMappingURL=vue.es.js.map
